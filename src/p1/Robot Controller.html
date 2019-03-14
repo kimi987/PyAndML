@@ -13622,7 +13622,7 @@ OK
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答：</strong> 1.第一个evn_data是全局变量，作用范围是当前文件的上下文。第二个evn_data是局部变量，作用范围是当前函数。 2.会改变，因为是数组类型的变量。函数传递的是指针地址，而值都是同一块值。</p>
+<p><strong>回答：</strong> 1.第一个evn_data是全局变量，作用范围是当前文件的上下文。第二个evn_data是局部变量，作用范围是当前函数。 2.会改变，因为env_data是列表类型变量，属于可变类型变量。所以在函数传递过程中，传递的是当前对象的引用。而实际上，内存中只维护了一份对象数据。而基本数据类型，整型，浮点型等等是不可变类型变量。在修改时，会改变值的引用。而值本身并不改变。</p>
 
 </div>
 </div>
